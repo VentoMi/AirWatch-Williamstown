@@ -16,7 +16,7 @@ const CreateBird = () => {
         .insert({name: birdAttributes.name, type: birdAttributes.type, size: birdAttributes.size, color: birdAttributes.color})
         .select();
 
-        // window.location = "/";
+        window.location = "/viewflock";
     }
 
 
@@ -25,7 +25,7 @@ const CreateBird = () => {
     };
     return (
         <div>
-            <h1>Create Bird {birdAttributes.name} {birdAttributes.size} {birdAttributes.color} </h1>
+            <h1>Create Bird </h1>
             <BasicTextFields handleUpdate={handleUpdate}/>
             <RadioButtonsGroup handleUpdate={handleUpdate}/>
             <Button onClick={createNewBird}> Create Bird</Button>

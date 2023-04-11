@@ -12,10 +12,11 @@ export default function MediaCard({birdData}) {
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         sx={{ height: 140 }}
-        image="/static/images/cards/contemplative-reptile.jpg"
+        image="../public/clipart1038387.png"
         title="green iguana"
       />
       <CardContent>
+        {/* <img src="../public/clipart1038387.png" style={{width:"50%"}}/> */}
         <Typography gutterBottom variant="h5" component="div">
            { console.log(birdData)}
           Name: {birdData.name}  <br/>
