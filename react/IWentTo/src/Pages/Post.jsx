@@ -20,7 +20,7 @@ export default function Post() {
     const [imageUrl, setImageUrl] = useState("Update imageUrl");
     const [upvotes, setUpVotes] = useState();
     const [comment, setComment] = useState([""]);
-    const [commentArray, setCommentArray] = useState([""]);
+    const [commentArray, setCommentArray] = useState([" "]);
     let arrayB = []
 
     const handleUpdate = (update) => {
@@ -42,6 +42,8 @@ export default function Post() {
         setUpVotes(data[0].upvotes)
         setImageUrl(data[0].imageUrl)
         setCommentArray(data[0].comment)
+        arrayB = data[0].comment
+        console.log(commentArray, "setPost")
       
     }
 
@@ -76,8 +78,8 @@ export default function Post() {
 
     const upDateComment = async () => {
         // let arrayNew = []
-        let arrayNew = [...commentArray, comment]
-        // console.log(commentArray, "commentA")
+        let arrayNew = [...arrayB, comment]
+        console.log(arrayB, "commentA")
 
         event.preventDefault()
         await supabase
@@ -86,8 +88,6 @@ export default function Post() {
         .eq('id', id.id)
 
         window.location = "/";
-
-
     }
 
     return (

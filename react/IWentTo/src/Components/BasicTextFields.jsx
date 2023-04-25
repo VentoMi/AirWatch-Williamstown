@@ -29,7 +29,7 @@ export default function BasicTextFields({handleUpdate, title, content, imgUrl}) 
       autoComplete="on"
     >
       {/* <TextField id="outlined-basic" label="Outlined" variant="outlined" /> */}
-      <TextField id="title" label="Title" variant="filled" onChange={(e) => handleChange(e)}/>
+      <TextField id="title" label="Title" placeholder={title} variant="filled" onChange={(e) => handleChange(e)}/>
         
       <TextField
           id="content"
@@ -39,7 +39,7 @@ export default function BasicTextFields({handleUpdate, title, content, imgUrl}) 
           variant="filled"
           onChange={(e) => handleChange(e)}
           placeholder={content}
-          defaultValue={content}
+         
         />
         {/* <TextField id="content" label="Content" variant="filled" onChange={(e) => handleChange(e)}/> */}
       <TextField id="imageUrl" label="Image url" variant="filled" placeholder={imgUrl} onChange={(e) => handleChange(e)}/>

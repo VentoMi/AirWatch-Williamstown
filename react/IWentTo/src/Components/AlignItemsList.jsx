@@ -13,8 +13,6 @@ import Stack from '@mui/material/Stack';
 
 export default function AlignItemsList({setComment, comments, upDateComment}) {
 
-    console.log(comments)
-
     const handleChange = (e) => {
         // let key = e.target.id
         let val = e.target.value
@@ -29,8 +27,9 @@ export default function AlignItemsList({setComment, comments, upDateComment}) {
     <TextField sx={{display:"flex", left: "5%", width:"60%"}} size="small"  id="outlined-basic" label="Leave a comment" placeholder='add comment' variant="outlined" onChange={(e) => handleChange(e)}/>
     <Button onClick={() => upDateComment()}> comment </Button>
     </Stack>
+    <h3> Comments</h3>
     <List sx={{display:"flex", flexDirection:"column", margin:"auto", width: '70%', bgcolor: 'background.paper' }}>
-     {comments.map((comment) => 
+     {comments && comments.map((comment) => 
      <div>
         <ListItem sx={{ textAlign: 'center' }}>
         <ListItemText
